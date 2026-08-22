@@ -749,7 +749,7 @@ body,
 p{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace !important}
 
 .cursor,
-.view { font-size:10px; }
+.view { font-size:10px !important; }
 
 /* Compact, readable work-experience accordion */
 .experience-static .role {

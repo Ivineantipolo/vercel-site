@@ -11,6 +11,19 @@ function screenshotUrl(url){
   return `https://s.wordpress.com/mshots/v1/${encodeURIComponent(url)}?w=1400`;
 }
 
+function fullScreenshotUrl(url){
+  const params=new URLSearchParams({
+    url,
+    meta:'false',
+    embed:'screenshot.url',
+    'screenshot.fullPage':'true',
+    'screenshot.type':'jpeg',
+    'viewport.width':'1400',
+    'viewport.height':'900'
+  });
+  return `https://api.microlink.io/?${params}`;
+}
+
 function cardClass(i){
   const pattern=['featured','','tall','','featured','','tall',''];
   return pattern[i%pattern.length];
@@ -49,8 +62,39 @@ function wireProjectInteractions(){
         });
       };
 
-      if(img.complete)startScroll();
-      else img.addEventListener('load',startScroll,{once:true});
+      const loadFullScreenshot=()=>{
+        if(img.dataset.fullLoaded==='true'){
+          startScroll();
+          return;
+        }
+        if(img.dataset.fullLoading==='true')return;
+
+        const fallbackSrc=img.src;
+        img.dataset.fullLoading='true';
+        pre.classList.add('loading');
+
+        const handleLoad=()=>{
+          img.removeEventListener('error',handleError);
+          img.dataset.fullLoading='false';
+          img.dataset.fullLoaded='true';
+          pre.classList.remove('loading');
+          startScroll();
+        };
+
+        const handleError=()=>{
+          img.removeEventListener('load',handleLoad);
+          img.dataset.fullLoading='false';
+          pre.classList.remove('loading');
+          img.src=fallbackSrc;
+        };
+
+        img.addEventListener('load',handleLoad,{once:true});
+        img.addEventListener('error',handleError,{once:true});
+
+        img.src=img.dataset.fullSrc;
+      };
+
+      loadFullScreenshot();
     };
     pre.addEventListener('mouseenter',go);
     pre.addEventListener('mouseleave',reset);
@@ -90,7 +134,7 @@ function renderProjects(platform){
     const [name,url]=p;
     const domain=new URL(url).hostname.replace('www.','');
     const platformName=platformLabels[platform];
-    return `<article class="card ${cardClass(i)}"><a class="preview" href="${url}" target="_blank" rel="noreferrer"><img loading="lazy" alt="${name} website screenshot" src="${screenshotUrl(url)}"><span class="view">View live ↗</span></a><div class="info"><span class="idx">${String(i+1).padStart(2,'0')}</span><div><h3>${name}</h3><p>${domain}</p><div class="tags"><span>${platformName}</span><span>Website Development</span><span>Responsive Build</span></div></div></div></article>`;
+    return `<article class="card ${cardClass(i)}"><a class="preview" href="${url}" target="_blank" rel="noreferrer"><img loading="lazy" alt="${name} website screenshot" src="${screenshotUrl(url)}" data-full-src="${fullScreenshotUrl(url)}"><span class="view">View live ↗</span></a><div class="info"><span class="idx">${String(i+1).padStart(2,'0')}</span><div><h3>${name}</h3><p>${domain}</p><div class="tags"><span>${platformName}</span><span>Website Development</span><span>Responsive Build</span></div></div></div></article>`;
   }).join('');
   requestAnimationFrame(()=>grid.classList.add('project-grid-enter'));
   [...grid.querySelectorAll('.card')].forEach((card,i)=>card.style.animationDelay=`${Math.min(i*35,280)}ms`);
