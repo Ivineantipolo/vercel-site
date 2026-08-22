@@ -549,6 +549,17 @@ body::after {
   color:var(--cyan);
   line-height:1;
 }
+.mono a {
+  text-decoration:underline;
+  text-decoration-color:transparent;
+  text-underline-offset:4px;
+  transition:color .2s,text-decoration-color .2s;
+}
+.mono a:hover,
+.mono a:focus-visible {
+  color:var(--cyan);
+  text-decoration-color:currentColor;
+}
 
 .about { align-items: center; }
 .about p { font-size: 18px !important; color: #a7b3c4; }
