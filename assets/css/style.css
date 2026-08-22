@@ -848,7 +848,7 @@ p{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace !impo
 
 @media(max-width:760px){
   .experience-static .role { padding:0 22px; }
-  .experience-static .role::before { left:8px; top:34px; }
+  .experience-static .role::before { left:8px; top:29px; }
   .experience-static .role-left {
     grid-template-columns:1fr auto;
     grid-template-rows:auto auto auto;
