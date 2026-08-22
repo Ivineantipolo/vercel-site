@@ -154,6 +154,15 @@ div, small, span, .date, .remote, .section-label, .eyebrow, .mono, .nav a,
   stroke:none !important;
   flex:none;
 }
+
+/* Balanced nine-card technical skills grid */
+.skills-nine { grid-template-columns:repeat(3,minmax(0,1fr)) !important; }
+@media(max-width:1000px){
+  .skills-nine { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
+}
+@media(max-width:620px){
+  .skills-nine { grid-template-columns:minmax(0,1fr) !important; }
+}
 .track span img {
   width:18px;
   height:18px;
