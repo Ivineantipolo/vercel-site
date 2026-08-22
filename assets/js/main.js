@@ -2,6 +2,8 @@ const portfolioData={"wordpress": [["World Wise Travel", "https://worldwisetrave
 const platformLabels={wordpress:'WordPress',webflow:'Webflow',shopify:'Shopify'};
 const grid=document.querySelector('#projectGrid');
 const cursor=document.querySelector('.cursor');
+const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const finePointer=window.matchMedia('(pointer: fine)').matches;
 let revealObserver;
 
 function screenshotUrl(url){
@@ -16,6 +18,7 @@ function cardClass(i){
 function wireProjectInteractions(){
   document.querySelectorAll('#projectGrid .preview').forEach(pre=>{
     const img=pre.querySelector('img');
+    const card=pre.closest('.card');
     const reset=()=>{
       img.style.transitionDuration='1.2s,.35s';
       img.style.transform='translateY(0)';
@@ -33,6 +36,13 @@ function wireProjectInteractions(){
       cursor.style.top=e.clientY+'px';
     });
     pre.addEventListener('mouseleave',()=>cursor.classList.remove('on'));
+    if(finePointer&&!reducedMotion&&card){
+      card.addEventListener('pointermove',e=>{
+        const r=card.getBoundingClientRect();
+        card.style.setProperty('--spot-x',`${e.clientX-r.left}px`);
+        card.style.setProperty('--spot-y',`${e.clientY-r.top}px`);
+      });
+    }
   });
 }
 
@@ -118,3 +128,54 @@ document.querySelectorAll('.magnetic').forEach(b=>{
   });
   b.addEventListener('pointerleave',()=>b.style.transform='');
 });
+
+// Modern ambient motion and scroll feedback.
+const progress=document.createElement('div');
+progress.className='scroll-progress';
+progress.setAttribute('aria-hidden','true');
+document.body.prepend(progress);
+
+function updateScrollUI(){
+  const max=document.documentElement.scrollHeight-window.innerHeight;
+  const amount=max>0?(window.scrollY/max)*100:0;
+  progress.style.setProperty('--scroll-progress',`${amount}%`);
+}
+
+updateScrollUI();
+document.addEventListener('scroll',updateScrollUI,{passive:true});
+
+if(finePointer&&!reducedMotion){
+  document.addEventListener('pointermove',e=>{
+    document.body.style.setProperty('--pointer-x',`${(e.clientX/window.innerWidth)*100}%`);
+    document.body.style.setProperty('--pointer-y',`${(e.clientY/window.innerHeight)*100}%`);
+  },{passive:true});
+
+  document.querySelectorAll('.profile,.stat,.role,.service,.tool').forEach(el=>{
+    el.addEventListener('pointermove',e=>{
+      const r=el.getBoundingClientRect();
+      el.style.setProperty('--spot-x',`${e.clientX-r.left}px`);
+      el.style.setProperty('--spot-y',`${e.clientY-r.top}px`);
+    });
+  });
+}
+
+const navLinks=[...document.querySelectorAll('.nav a[href^="#"]')];
+const observedSections=navLinks
+  .map(link=>document.querySelector(link.getAttribute('href')))
+  .filter(Boolean);
+
+if(observedSections.length){
+  const navObserver=new IntersectionObserver(entries=>{
+    const visible=entries
+      .filter(entry=>entry.isIntersecting)
+      .sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+    if(!visible)return;
+    navLinks.forEach(link=>{
+      const active=link.getAttribute('href')===`#${visible.target.id}`;
+      link.classList.toggle('active',active);
+      if(active)link.setAttribute('aria-current','location');
+      else link.removeAttribute('aria-current');
+    });
+  },{rootMargin:'-25% 0px -60%',threshold:[0,.1,.3,.6]});
+  observedSections.forEach(section=>navObserver.observe(section));
+}
