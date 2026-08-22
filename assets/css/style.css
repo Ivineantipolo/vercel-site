@@ -711,3 +711,13 @@ body::after {
   .hero h1 span.word-line{animation:none;opacity:1;transform:none}
   .preview.loading{animation:none}
 }
+
+/* Requested font-size adjustment */
+.status,
+.signals span,
+.mono,
+.tags span{font-size:12px !important}
+
+/* Body / paragraph font */
+body,
+p{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace !important}
