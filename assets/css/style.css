@@ -154,6 +154,13 @@ div, small, span, .date, .remote, .section-label, .eyebrow, .mono, .nav a,
   stroke:none !important;
   flex:none;
 }
+.track span img {
+  width:18px;
+  height:18px;
+  display:block;
+  object-fit:contain;
+  flex:none;
+}
 @keyframes marqueeContinuous {
   from { transform:translate3d(0,0,0); }
   to { transform:translate3d(-50%,0,0); }
@@ -549,6 +556,7 @@ body::after {
   color:var(--cyan);
   line-height:1;
 }
+
 .mono a {
   text-decoration:underline;
   text-decoration-color:transparent;
@@ -1031,4 +1039,9 @@ svg { max-width:100%; }
   .remote { font-size:10px !important; }
   .experience-static .role { padding-inline:18px; }
   .experience-static .toggle { width:38px; height:38px; }
+}
+
+/* Keep the profile location compact without changing other eyebrow labels. */
+.profile > .eyebrow {
+  font-size:12px !important;
 }
