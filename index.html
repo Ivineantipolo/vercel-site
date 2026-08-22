@@ -1,0 +1,414 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mark Ivine Antipolo | Senior Web Developer</title><meta name="description" content="Senior web developer building reliable WordPress, Webflow and Shopify websites."><style>
+:root{--bg:#050914;--panel:#0d1624;--panel2:#111c2d;--text:#f5f7fb;--muted:#91a0b4;--line:#22324a;--blue:#4b8dff;--green:#7ee0a3;--max:1240px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 20% 0,#10253a 0,transparent 30%),linear-gradient(#06101d,#050914 55%,#05070d);color:var(--text);font:16px/1.65 Inter,system-ui,-apple-system,Segoe UI,sans-serif;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(#000,transparent 85%)}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}.header{position:fixed;inset:0 0 auto;z-index:30;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 max(20px,calc((100vw - var(--max))/2));border-bottom:1px solid transparent;transition:.25s}.header.scrolled{background:#050914cc;backdrop-filter:blur(18px);border-color:#ffffff12}.logo{width:42px;height:42px;border:1px solid var(--line);border-radius:12px;display:block;overflow:hidden;background:#0e1827}.logo img{width:100%;height:100%;object-fit:cover;object-position:center 30%}.nav{display:flex;gap:6px;padding:5px;border:1px solid var(--line);border-radius:999px;background:#0a1422cc}.nav a{padding:8px 11px;border-radius:999px;color:#a7b4c4;font-size:11px;text-transform:uppercase;letter-spacing:.06em}.nav a:hover{background:#142238;color:white}.hero{min-height:760px;padding:130px 0 70px;display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center;position:relative}.hero:before{content:"";position:absolute;width:480px;height:480px;right:-80px;top:100px;border-radius:50%;background:radial-gradient(circle,#4b8dff24,transparent 68%);filter:blur(12px);animation:drift 7s ease-in-out infinite alternate;z-index:-1}@keyframes drift{to{transform:translate(-40px,25px) scale(1.12)}}.status{display:inline-flex;gap:8px;align-items:center;border:1px solid #7ee0a344;border-radius:999px;padding:8px 11px;color:#9fb0c3;background:#7ee0a30d;font-size:10px;text-transform:uppercase}.dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 18px var(--green);animation:pulse 1.8s infinite}@keyframes pulse{50%{transform:scale(1.5);opacity:.6}}.eyebrow{margin-top:16px;color:var(--blue);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em}.hero h1,.section h2,.contact h2{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:600;letter-spacing:-.035em}.hero h1{font-size:clamp(52px,6.1vw,86px);line-height:.89;margin:12px 0 24px;max-width:800px}.hero h1 span{display:block;color:var(--blue)}.hero p{max-width:700px;color:var(--muted);font-size:16px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border:1px solid var(--line);border-radius:999px;font-weight:800;font-size:11px;text-transform:uppercase;transition:.2s}.btn:hover{transform:translateY(-3px)}.btn.primary{background:var(--blue);border-color:var(--blue);box-shadow:0 14px 38px #4b8dff33}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}.chips span,.tags span{border:1px solid var(--line);border-radius:999px;padding:6px 9px;color:#8294aa;font-size:9px;text-transform:uppercase}.profile{position:relative;padding:24px;min-height:470px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(160deg,#143145,#101a28 58%,#1b2923);box-shadow:0 32px 100px #0007,0 0 70px #4b8dff12;animation:float 5.5s ease-in-out infinite;transform-style:preserve-3d}@keyframes float{50%{transform:translateY(-10px)}}.profile-top{display:flex;justify-content:space-between;align-items:center}.who{display:flex;align-items:center;gap:12px}.avatar{width:54px;height:54px;border-radius:50%;display:block;overflow:hidden;border:1px solid #ffffff22;background:#17314b}.avatar img{width:100%;height:100%;object-fit:cover;object-position:center 30%}.who strong{font-size:24px;line-height:.9}.remote{font-size:9px;color:#91a0b4}.signals{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:54px 0 26px}.signals div{border:1px solid #ffffff14;border-radius:8px;padding:12px;background:#ffffff07}.signals strong{display:block;color:var(--blue);font-size:20px}.signals span{font-size:8px;color:#91a0b4;text-transform:uppercase}.profile h3{font-size:28px;line-height:1.05;margin:8px 0 15px;font-weight:600;letter-spacing:-.02em}.mono{border-top:1px solid #ffffff14;padding-top:16px;color:#9aabbd;font:11px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace}.marquee{overflow:hidden;border-block:1px solid var(--line);background:#081421}.track{display:flex;width:max-content;will-change:transform;animation:marquee 22s linear infinite}.marquee-group{display:flex;flex-shrink:0;align-items:center}.track span{display:inline-flex;align-items:center;gap:9px;white-space:nowrap;padding:17px 34px;color:#7f90a5;text-transform:uppercase;font-size:10px}.track span svg{width:14px;height:14px;stroke:#4b8dff;stroke-width:1.8;fill:none;flex:none}@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}@media (prefers-reduced-motion:reduce){.track{animation:none}}.stats{display:grid;grid-template-columns:.8fr .8fr 1.4fr .8fr;gap:12px;padding:50px 0 90px}.stat{border:1px solid var(--line);border-radius:10px;padding:22px;background:linear-gradient(145deg,#132132,#0d1724)}.stat strong{font-size:40px;line-height:1}.stat small{display:block;margin-top:8px;color:#8393a7;text-transform:uppercase;font-size:9px}.section{padding:100px 0}.section-head{max-width:940px;margin-bottom:38px}.section-label{color:var(--blue);text-transform:uppercase;font-size:10px;font-weight:800;letter-spacing:.12em}.section h2{font-size:clamp(38px,5.3vw,68px);line-height:.95;margin:8px 0}.section-intro{max-width:720px;color:var(--muted)}.projects{border-block:1px solid var(--line);background:linear-gradient(#091422aa,#050a12f7)}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}.card{grid-column:span 6;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#0d1725;transition:.3s;box-shadow:0 18px 55px #0003}.card:hover{transform:translateY(-7px);border-color:#4b8dff66;box-shadow:0 30px 85px #0006}.card.featured{grid-column:span 8}.card.featured+.card{grid-column:span 4;margin-top:90px}.card.tall{grid-column:span 5}.card.tall+.card{grid-column:span 7;margin-top:70px}.preview{position:relative;display:block;aspect-ratio:16/10;overflow:hidden;background:#0b1522}.preview img{width:100%;height:auto;min-height:100%;display:block;object-fit:cover;object-position:top;will-change:transform;transition:transform 5.5s cubic-bezier(.22,.61,.36,1),filter .35s}.preview:hover img{filter:saturate(1.05) brightness(1.03)}.view{position:absolute;right:14px;bottom:14px;padding:8px 11px;border:1px solid #ffffff22;border-radius:999px;background:#030914d9;font-size:9px;text-transform:uppercase;opacity:0;transform:translateY(8px);transition:.25s}.card:hover .view{opacity:1;transform:none}.info{display:flex;gap:15px;padding:20px 21px 23px}.idx{color:var(--blue);font-size:10px;font-weight:800}.info h3{font-size:clamp(23px,2.3vw,32px);margin:0 0 4px;font-weight:600;letter-spacing:-.02em}.info p{margin:0;color:#8394aa;font-size:10px}.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}.about{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}.about p{color:var(--muted);font-size:16px;line-height:1.8}.timeline{display:grid;gap:10px}.role{position:relative;border:1px solid var(--line);border-radius:10px;padding:24px 58px 24px 28px;background:#0d1725;cursor:pointer}.role h3{font-size:26px;margin:6px 0;font-weight:600;letter-spacing:-.02em}.role .date{color:var(--blue);font-size:10px;text-transform:uppercase}.role ul{max-height:0;overflow:hidden;opacity:0;margin:0;padding-left:18px;color:#91a1b5;transition:.35s}.role.open ul{max-height:260px;opacity:1;margin-top:16px}.toggle{position:absolute;right:18px;top:18px;width:32px;height:32px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--blue)}.services{background:linear-gradient(120deg,#0f2937,#101624 58%,#1d1c3d);border-block:1px solid var(--line)}.service-grid,.tool-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.service,.tool{border:1px solid #ffffff16;border-radius:10px;background:#ffffff08;padding:22px;min-height:180px}.service span,.tool b{color:var(--blue);font-size:10px}.service h3,.tool h3{font-size:18px;margin:12px 0;font-weight:600;letter-spacing:-.02em}.service p{color:#91a1b5;font-size:11px}.tool-grid{grid-template-columns:repeat(2,1fr)}.tool{min-height:210px}.tool .tags{margin-top:18px}.contact{padding:70px 0}.contact-box{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:linear-gradient(120deg,#113146,#0b1420 52%,#211f40);padding:72px 58px}.contact-box:after{content:"";position:absolute;width:480px;height:480px;right:-180px;top:-220px;border-radius:50%;background:radial-gradient(circle,#756dff38,transparent 68%)}.contact h2{font-size:clamp(48px,6.4vw,88px);line-height:.86;max-width:1000px;margin:8px 0 28px}.contact-row{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;border-top:1px solid #ffffff18;padding-top:25px}.contact-row p{color:#9aa8b9;max-width:650px}.contact-meta{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid #ffffff18;margin-top:48px;padding-top:18px;color:#7e8da1;font-size:9px;text-transform:uppercase}.reveal{opacity:0;transform:translateY(22px);transition:.65s}.reveal.show{opacity:1;transform:none}.cursor{position:fixed;width:88px;height:88px;border-radius:50%;background:#4b8dfff0;color:white;display:grid;place-items:center;z-index:100;pointer-events:none;opacity:0;transform:translate(-50%,-50%) scale(.7);transition:opacity .15s,transform .15s;font-size:9px;font-weight:800;text-transform:uppercase;text-align:center}.cursor.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
+@media(max-width:950px){.hero{grid-template-columns:1fr}.profile{animation:none}.stats{grid-template-columns:1fr 1fr}.card,.card.featured,.card.featured+.card,.card.tall,.card.tall+.card{grid-column:span 6;margin-top:0}.service-grid{grid-template-columns:1fr 1fr}.contact-row{grid-template-columns:1fr}.about{grid-template-columns:1fr}}
+@media(max-width:680px){.wrap{width:min(var(--max),calc(100% - 28px))}.header{padding:0 14px}.nav a:nth-child(-n+2){display:none}.hero{padding-top:110px;min-height:auto}.hero h1{font-size:46px}.stats{grid-template-columns:1fr 1fr;padding-bottom:70px}.grid{grid-template-columns:1fr}.card,.card.featured,.card.featured+.card,.card.tall,.card.tall+.card{grid-column:auto;margin:0}.service-grid,.tool-grid{grid-template-columns:1fr}.section{padding:72px 0}.section h2{font-size:38px}.contact-box{padding:54px 24px 28px}.contact h2{font-size:46px}.cursor{display:none}.actions .btn{flex:1 1 100%}}
+
+/* Professional heading typography */
+.hero h1,
+.section h2,
+.contact h2,
+.profile h3,
+.info h3,
+.role h3,
+.service h3,
+.tool h3 {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 600;
+}
+.hero h1,
+.section h2,
+.contact h2 {
+  letter-spacing: -0.035em;
+}
+.hero h1 { line-height: .96; }
+.section h2 { line-height: 1.02; }
+.contact h2 { line-height: .94; }
+.profile h3,
+.info h3,
+.role h3,
+.service h3,
+.tool h3 { letter-spacing: -0.02em; }
+
+/* Portfolio platform tabs */
+.project-tabs{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:28px 0 34px;
+  padding:6px;
+  width:max-content;
+  max-width:100%;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:#08121fcc;
+  backdrop-filter:blur(14px);
+}
+.project-tab{
+  appearance:none;
+  border:0;
+  background:transparent;
+  color:#8fa0b4;
+  min-height:42px;
+  padding:0 18px;
+  border-radius:999px;
+  font:700 10px/1 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:background .22s,color .22s,box-shadow .22s,transform .22s;
+}
+.project-tab:hover{color:#fff;transform:translateY(-1px)}
+.project-tab.active{
+  color:#fff;
+  background:linear-gradient(135deg,#397ef2,#5b9cff);
+  box-shadow:0 10px 28px #4b8dff35;
+}
+.project-tab .count{
+  margin-left:7px;
+  opacity:.7;
+  font-size:9px;
+}
+.project-grid-enter .card{
+  animation:projectCardIn .45s both;
+}
+@keyframes projectCardIn{
+  from{opacity:0;transform:translateY(18px)}
+  to{opacity:1;transform:none}
+}
+@media(max-width:680px){
+  .project-tabs{width:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:5px;border-radius:14px}
+  .project-tab{padding:0 8px;border-radius:10px;font-size:9px}
+}
+
+
+/* Three-column portfolio grid */
+@media (min-width: 951px) {
+  #projectGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  #projectGrid .card,
+  #projectGrid .card.featured,
+  #projectGrid .card.featured + .card,
+  #projectGrid .card.tall,
+  #projectGrid .card.tall + .card {
+    grid-column: auto;
+    margin-top: 0;
+  }
+
+  #projectGrid .info h3 {
+    font-size: clamp(20px, 1.6vw, 25px);
+  }
+}
+
+@media (min-width: 681px) and (max-width: 950px) {
+  #projectGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #projectGrid .card,
+  #projectGrid .card.featured,
+  #projectGrid .card.featured + .card,
+  #projectGrid .card.tall,
+  #projectGrid .card.tall + .card {
+    grid-column: auto;
+    margin-top: 0;
+  }
+}
+
+
+/* Requested typography sizing */
+body, p { font-size:16px !important; }
+div, small, span, .date, .remote, .section-label, .eyebrow, .mono, .nav a,
+.chips span, .tags span, .info p, .contact-meta, .stat small {
+  font-size:14px !important;
+}
+
+
+/* Seamless continuous marquee with brand logos */
+.marquee { overflow:hidden; width:100%; }
+.track {
+  display:flex !important;
+  width:max-content !important;
+  animation:marqueeContinuous 34s linear infinite !important;
+  will-change:transform;
+  transform:translate3d(0,0,0);
+}
+.marquee-group {
+  display:flex !important;
+  flex:none !important;
+  width:max-content;
+  min-width:max-content;
+  align-items:center;
+}
+.track span {
+  flex:0 0 auto;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  white-space:nowrap;
+}
+.track span svg {
+  width:18px !important;
+  height:18px !important;
+  stroke:none !important;
+  flex:none;
+}
+@keyframes marqueeContinuous {
+  from { transform:translate3d(0,0,0); }
+  to { transform:translate3d(-50%,0,0); }
+}
+
+
+/* Experience layout matching reference */
+.experience-static .role {
+  display:grid;
+  grid-template-columns: 36% 64%;
+  gap:34px;
+  cursor:default;
+  padding:28px 34px;
+}
+.experience-static .role:before{
+  content:"";
+  position:absolute;
+  width:9px;height:9px;border-radius:50%;
+  left:7px;top:31px;
+  background:#4b8dff;
+  box-shadow:0 0 0 4px #081421,0 0 18px #4b8dff77;
+}
+.experience-static .role h3 {
+  font-size:30px;
+  line-height:1.03;
+  margin:10px 0 4px;
+}
+.experience-static .role ul {
+  max-height:none !important;
+  opacity:1 !important;
+  overflow:visible !important;
+  margin:0 !important;
+  padding-left:20px !important;
+}
+.experience-static .role-location { color:#91a0b4; font-size:14px; }
+.experience-static .toggle { display:none !important; }
+@media(max-width:760px){
+  .experience-static .role{grid-template-columns:1fr;gap:14px}
+}
+
+
+.skills-eight { grid-template-columns:repeat(4,1fr) !important; }
+.skills-eight .tool { min-height:180px; }
+.skills-eight .tool h3 { font-size:24px; margin:10px 0 16px; }
+@media(max-width:1000px){ .skills-eight{grid-template-columns:repeat(2,1fr)!important;} }
+@media(max-width:620px){ .skills-eight{grid-template-columns:1fr!important;} }
+
+</style></head><body><div class="cursor">View<br>project ↗</div><header class="header"><a class="logo" href="#top" aria-label="Mark Ivine Antipolo"><img src="data:image/jpeg;base64,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" alt="Mark Ivine Antipolo"></a><nav class="nav"><a href="#about">About</a><a href="#experience">Experience</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav></header><main id="top"><section class="hero wrap"><div><div class="status reveal"><span class="dot"></span>Available for projects</div><div class="eyebrow reveal">WordPress / Webflow / Shopify Developer</div><h1 class="reveal">Reliable websites <span>built to convert.</span></h1><p class="reveal">I help agencies, startups, and growing businesses turn approved designs into responsive, easy-to-manage websites that load fast, look sharp, and support real marketing goals.</p><div class="actions reveal"><a class="btn primary magnetic" href="mailto:ivineantipolo@gmail.com">Start a project</a><a class="btn magnetic" href="#work">View selected work</a></div><div class="chips reveal"><span>10+ years experience</span><span>Design-to-development</span><span>Performance-focused</span></div></div><aside class="profile reveal tilt"><div class="profile-top"><div class="who"><div class="avatar"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCACgAKADASIAAhEBAxEB/8QAHAABAAAHAQAAAAAAAAAAAAAAAAECAwQFBgcI/8QAORAAAQMDAgMGAwUIAwEAAAAAAQACAwQFEQYhEjFRBxMiQWFxFDKBQlKRocEVFiMzYpLR8ENTsuH/xAAaAQEAAgMBAAAAAAAAAAAAAAAABAUBAwYC/8QAKREAAgIBAgUDBQEBAAAAAAAAAAECAxEEIQUSEzFhFDJBIkJRcZGxM//aAAwDAQACEQMRAD8A6CiIulOaCIiAIiIAiKjV1dPQUklVVTMhgibxPe84DQsN43ZlLOyKys6q7W+ik7uprIon4zwF2/4Lkequ2Oeoe6msANPANjUyN8b/AGH2R+a0f9561rDI2uf3rjxF3mT6nmoFmtS2huWFeib3m8Hp2OeOZjXxPa9rhkOacghTOc1vzEN9zheZbd2n32yx1DIJQXzDwucMhh8yG8srHu1dfqyo76S6VL35z/NOV59dt23PXod++x6qDmu5OB9iorztY+0W826QcU0kxHk95/38Quv6S1zQ6lZ3Oe6q2gcUbtj/AL6jb2W6rVxseHszTdpJVrmW6NqREUwhBERAEREAREQBERAEREBB72xxue9wYxoLnOccAAcySvO/aZ2hO1PdHW+glItNO7DcbCZ33z6dB9fNbN2z60mbN+69vlLAWh9Y8HGc7iP2xgn6BcdHdQ7jLj5k+ZVVq7+Z9OPYtdJRhdSXcu6aMOOXDJH3uShV1rj4Yo28I24i0KnDOC7LxnyDP8q8jpvjZvlyANmN8yq8sUsmHA4pAZDufTmpuHupC0gbdVvts7N6qti76YlrnchjYK0vWh6qgb3gDnNA+YhaetDOMkh6axLODXqSeJ+WSuMbhyLhy+vRXTK2ooamOpoal0dTCeJjmnDv/oVFlIY3Fj2eJn2TsR7dQrapqYzlnARj8Qtxoxg9FdnGuI9YWdzZgyO40uGzMafmHk8Dnj9Vua8qaT1HNprUdNdYGh/dHhkZnAkYdiP988L09aLrTXu0U1yoy409SzjZxDBHkQR1ByFc6W7qR5X3RS6qnpy5l2ZeoiKYQgiIgCIiAIiIAhwBucDzKIgPKmtbo666wulcI3NbLUOLQ8YIaNhn6Ba2X8Tthut67V7bBQdoVZDA0MjkZHKGNGACW7/nk/VYfTmmzd6slwIibzIXN2vkb5jpKVzpKJjKam4S1pyZHnYY3/DqutaC0WQGVlZFhx3awj5ff1U9j0xY7PP3r295OPtSO4iF0Gy3C1zObFFVxcfINLsFV1tkprES4opjW8z7mTpbbHDAW7e+FTuOn46ymkDADxjdrvZZeOAkZa8OHTKm7qV2Q0gYWhR8Epy8nnTXOlKu2SvLWHuuYI3x6LnUrjxYfsRtlerb7SwTBzKkMI5HiXFtc6FZAZa62t8LRl0fUdQpNN2HyyIWo0+VzwOewuc1xI32XdOwyvq57NcKR/ipKeRro8n5XOzxAemwPv7rg7WFj8EEFehuxO3im0VLWF2X1dQ7i9ODwj9VcaRPqrBQ6trpPJ0ZERXZSBERAEREAREQBERAcW7brXC68W65ROaZXMME7QdxjdhI9iQmjreGaea6IYe/fOFm9R22knfeJqyRoZPPyedttvxGyaJi7mhp4XDJjBBJ9yFyOru6kpNL5O20em6Kjl52LCU0NrJ+Oe5xf8xzgn2P+lWgo9L3xrpaBsgkjIDpGueA0k7ZJGATjlstyuem4a2tZUmJveMOW58lcUNiFLTyRxwQsieeORjW+F56nqVCVm3kn9LL7LBX0bTT00b6Vz35j2IcScLEapdWVNU9jLhUUsQGCYnlq2SyjgmlIJORzVpU28Vsj2kBzmu7xuRsCF4U3k2uCxg0eis8UZ78aikqfIsmdxZPo4Hb6q+ZT1QnfHOe9geMA9PRUZtBU8Ukz6SKelqJXcRkDs8O+Tw9Aei2KntTqK1tY92S0c8YXuc0/nJqhXy/GDhN1skkeqpLdSxmR75uCJo5kk7D816Y0/Z4rBp+jtcOOGmjDSfvO5uP1JK5nY7JK3V1XqZ0Imjo5XiFh5vdjGegxvj1XWYJRPTxytBAkaHAHyyMro+GyhLO+5yvFK5ww8fS2yoiIrgpAiIgCIiAIiIAiIgOfaioOK9mKVvFGJHShpOOIHcY+uypWeUQzEkcOTy6brcb7a5LjCwwCPvWEjxkgEe61OOgkpLnNRzlpljwctGGnIzsuT1umlVOUsfS3/p2mh1kL64xz9SW6/RvFEI6iJrifXCt7zcY6GANbGe7ceF8gGeEKja3GOEHO3VY253mlhneyqqmRtb5A5P4KuSyW2cE1o1FafipYx8RE1v/AGxlhPtnmp6W+Uklc4UvemY8mPiIa8eeCeasP2raHNbmEu3OHviJ3HTZTR3G21NRxUlQwS/cOy9uJnc2yNkFZT9+xgB82nyWHu8gZA8bclcU8zxG9wy0vGSFhrnKXl5ds3lkrW++DD7ZLi0tmhtzqN7G8EjhK0gcw45WytaGtDQMADCxlrp+JjZC7LWbDA5kDH1wsoum4XS4Qdkvu/w5LjOojOyNUft7/sIiK4KIIiIAiIgCIiAIiIAtL1ZUii1HTS+T4QHf3FbotD12zvbpGweUA/8ARVbxL/g8+C04Vn1Cx+GbFZ6yFwJJBY4KyulrZ+02XOkgiFW1pYC5gPE08wcrVNPXvuJRS1JwR8pPmF0KkfDVQcw4HkuVWYs7NST3FHqmo7pjJKekc9pdkEFnPb6LXLrb49SvZBJRwQRxPDzLAC1wIwPC76YWzPtEMxDi5wx0U3w8UDch2ccsra5bGcQXZFsYYrfQiJmckYAJzgKyoqcVlyaCMxU/jefIu8h+v0Vve7m2BoY0h8rjhrVmLBEYrLAXfPJl7z1JP+MKVw6hXXZl2W5V8U1DpoxHu9jIMY2Ngaxoa0cgBgKKIusOMCIiyYCIiAIiIAiLX7zrjT1i4m1dxjfM3/hg/iP9sDYfUheZSUVls9Ri5PEUbApJZo4IXzTSNjjjHE57zhrR1JPJcgvPbTWSFzLRboqdnlJUHvH/ANowB+a0e86xv1+jMdfc5pYic90CGs/tGAok9XBe3clw0c37tjsOpe1GzW21VBtNVHcLgBwxMa1xj4updsCB6Hda3Zaq6Xun+JvFUKmreM5DQ1rAdw0AeQXL/wCbCN/EAt77PL9TyTi31UjY5tgzjOA/091T662y2PgvOH1VUz8/kyN1tTx42Atc3cEeSWvV1Vav4NS1zm+Tlv8AJZ2VUeMDK16v0a2okLQOF3RVSkvkunF5zEuabXkb4sfER+xdhW1frdr2mOmJnmdsOHkFiBoSOGbFRFM4E/ZdhZq1aZghqGiOHgA3JO5RuIXO+5SoKKd7XVtaeKZw2H3R0C3SwXGjudkgnoZ2zxNHdOc3ye3ZzT6grFXGEQUzmgfZXEmX64WC7Vv7Gr5qSN0zncMbvDz38J2O/UKw4bf05ttFZxWjq1xSfZnpNFyqwdtFOaeOG/UcjZm+F1RTgFrj1LNiPpldEs+oLVf4DLbK6KpDfma04e33adwulhdCftZys6Z1+5GRREW00hERAOZWo6m7RrPp9z6eJ3x9a3YxRO8LD/U7kPYZK0DWnadVXeSShtLn0tBu0uHhkmHUn7I9Px6Ln5cXHJ/JV1ur+K/6WVOjzvZ/DZ9QdoF+v5fHJWGnpnf8FP4G49Tzd9StWceuEIymMKBKTk8tljGKisRRKeqpkbkqqQoFhyvJkljkMbx0UZo+Mh7Dhw6KV0ZxkKLHHkdkBuOmu1S82EMgrWC5UrdsSOxI0ejv85XS7b2laXvzGZq/gaj/AK6rwb+juR/FcFLcjcKk6Jp9lHnp4S8EmGpnDyeoGVkVS0GCeGVn3mOBB/AqV9bbbVC6orq6mpxjJMsgb+WV5fEZZ8kj2+gOFAxOLvE4uPUrT6Tyb/W/hHV9adp9HNHJR2Mume8cJqSMNaP6QdyfVcxDvDxO3zuqTI+E4PNRkz7eilV1xrWERLLZWPMiV3iac+Zyq1BXVduqmVFLUSQyxnLXscWuHsVQOSpg3bdbDUdT012w1cTmQXyEVUfLv4wGyD1I5O/Irq1su1DeaJtXb6llRC7zad2noRzB9CvKu/ILLWHUdy07XNqqCodG7k5vNrx0I8wplWqlHaW6IdukjLeGzPUCLS9IdpNs1J3dLU4ori7bu3HwSH+k9fQ7+63RWcJxmsxZVThKDxJHlGRpEmc5BQclNGRIwA+xUD4XcBPi5g9QqA6En4csKkHVVWHYbKjHuD6OIQEcb7BRCmPPZQ2WQQI8lKWKoN0wsAkACFgPMZU5bhEBT7oZyoiMeqnQ9UBJwjyVMszuVWIUuDlAScA6KDxgKpvn0UrtxsgKcbcqZzcKeIYCO3egKYJactyCF2Ds67SDUmOzXycd78tPUyO+b+l569D9CuTlgMfJWzh4vZbK7JVvKNdlcbI4kTQu4TIzo7Ki7+NkcnN5HopHHgrRnYPGFCR4iqWk7B2y1mwuoZBJAHcjyPuqUGXGY9H/AKKWE8FRKzyfh4/VRovFHK7rIUBXDd1DG6qAIWrIKeMqbko8Pmob5QDZCMIo42QEOSlO4VTAIKkIWAQRRwnkgJcbqUt3VTy5IW5QEoOOaAZKFuyizGCUBMzkd8q2LCX8PUquxwy7Cpxu4iX+R2Hssg//2Q==" alt="Mark Ivine Antipolo"></div><strong>MARK IVINE<br>ANTIPOLO</strong></div><span class="remote">REMOTE</span></div><div class="signals"><div><strong>01</strong><span>Design to live</span></div><div><strong>02</strong><span>Responsive build</span></div><div><strong>03</strong><span>Launch polish</span></div></div><div class="eyebrow">Based in Cavite, Philippines</div><h3>Senior web developer for client-ready websites</h3><div class="mono">WordPress · Webflow · Shopify · Elementor<br><br>ivineantipolo@gmail.com</div></aside></section><div class="marquee"><div class="track"><div class="marquee-group"><span><svg viewBox="0 0 512 512" aria-hidden="true" style="fill:#21759B"><path d="M61.7 169.4l101.5 278C92.2 413 43.3 340.2 43.3 256c0-30.9 6.6-60.1 18.4-86.6zm337.9 75.9c0-26.3-9.4-44.5-17.5-58.7-10.8-17.5-20.9-32.4-20.9-49.9 0-19.6 14.8-37.8 35.7-37.8.9 0 1.8.1 2.8.2-37.9-34.7-88.3-55.9-143.7-55.9-74.3 0-139.7 38.1-177.8 95.9 5 .2 9.7.3 13.7.3 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l77.5 230.4L249.8 247l-33.1-90.8c-11.5-.7-22.3-2-22.3-2-11.5-.7-10.1-18.2 1.3-17.5 0 0 35.1 2.7 56 2.7 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l76.9 228.7 21.2-70.9c9-29.4 16-50.5 16-68.7zm-139.9 29.3l-63.8 185.5c19.1 5.6 39.2 8.7 60.1 8.7 24.8 0 48.5-4.3 70.6-12.1-.6-.9-1.1-1.9-1.5-2.9l-65.4-179.2zm183-120.7c.9 6.8 1.4 14 1.4 21.9 0 21.6-4 45.8-16.2 76.2l-65 187.9C426.2 403 468.7 334.5 468.7 256c0-37-9.4-71.8-26-102.1zM504 256c0 136.8-111.3 248-248 248C119.2 504 8 392.7 8 256 8 119.2 119.2 8 256 8c136.7 0 248 111.2 248 248zm-11.4 0c0-130.5-106.2-236.6-236.6-236.6C125.5 19.4 19.4 125.5 19.4 256S125.6 492.6 256 492.6c130.5 0 236.6-106.1 236.6-236.6z"/></svg>WordPress</span><span><svg viewBox="0 0 640 512" aria-hidden="true" style="fill:#4353FF"><path d="M640 64L435.8 463.2H244l85.5-165.5h-3.8C255.1 389.3 149.9 449.5 0 463.2V300.1s95.9-5.7 152.3-64.9H0V64H171.1V204.8l3.8 0L244.9 64H374.3V203.9l3.8 0L450.7 64H640z"/></svg>Webflow</span><span><svg viewBox="0 0 448 512" aria-hidden="true" style="fill:#95BF47"><path d="M388.32,104.1a4.66,4.66,0,0,0-4.4-4c-2,0-37.23-.8-37.23-.8s-21.61-20.82-29.62-28.83V503.2L442.76,472S388.72,106.5,388.32,104.1ZM288.65,70.47a116.67,116.67,0,0,0-7.21-17.61C271,32.85,255.42,22,237,22a15,15,0,0,0-4,.4c-.4-.8-1.2-1.2-1.6-2C223.4,11.63,213,7.63,200.58,8c-24,.8-48,18-67.25,48.83-13.61,21.62-24,48.84-26.82,70.06-27.62,8.4-46.83,14.41-47.23,14.81-14,4.4-14.41,4.8-16,18-1.2,10-38,291.82-38,291.82L307.86,504V65.67a41.66,41.66,0,0,0-4.4.4S297.86,67.67,288.65,70.47ZM233.41,87.69c-16,4.8-33.63,10.4-50.84,15.61,4.8-18.82,14.41-37.63,25.62-50,4.4-4.4,10.41-9.61,17.21-12.81C232.21,54.86,233.81,74.48,233.41,87.69ZM200.58,24.44A27.49,27.49,0,0,1,215,28c-6.4,3.2-12.81,8.41-18.81,14.41-15.21,16.42-26.82,42-31.62,66.45-14.42,4.41-28.83,8.81-42,12.81C131.33,83.28,163.75,25.24,200.58,24.44ZM154.15,244.61c1.6,25.61,69.25,31.22,73.25,91.66,2.8,47.64-25.22,80.06-65.65,82.47-48.83,3.2-75.65-25.62-75.65-25.62l10.4-44s26.82,20.42,48.44,18.82c14-.8,19.22-12.41,18.81-20.42-2-33.62-57.24-31.62-60.84-86.86-3.2-46.44,27.22-93.27,94.47-97.68,26-1.6,39.23,4.81,39.23,4.81L221.4,225.39s-17.21-8-37.63-6.4C154.15,221,153.75,239.8,154.15,244.61ZM249.42,82.88c0-12-1.6-29.22-7.21-43.63,18.42,3.6,27.22,24,31.23,36.43Q262.63,78.68,249.42,82.88Z"/></svg>Shopify</span><span><svg viewBox="0 0 512 512" aria-hidden="true" style="fill:#92003B"><path d="M.361 256C.361 397 114 511 255 511C397 511 511 397 511 256C511 116 397 2.05 255 2.05C114 2.05 .361 116 .361 256zM192 150V363H149V150H192zM234 150H362V193H234V150zM362 235V278H234V235H362zM234 320H362V363H234V320z"/></svg>Elementor</span><span><svg viewBox="0 0 640 512" aria-hidden="true" style="fill:#4B8DFF"><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>Design to Development</span><span><svg viewBox="0 0 448 512" aria-hidden="true" style="fill:#4B8DFF"><path d="M448 80l0 48c0 44.2-100.3 80-224 80S0 172.2 0 128L0 80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6L448 288c0 44.2-100.3 80-224 80S0 332.2 0 288L0 186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6l0 85.9c0 44.2-100.3 80-224 80S0 476.2 0 432l0-85.9z"/></svg>CMS Strategy</span><span><svg viewBox="0 0 512 512" aria-hidden="true" style="fill:#21759B"><path d="M61.7 169.4l101.5 278C92.2 413 43.3 340.2 43.3 256c0-30.9 6.6-60.1 18.4-86.6zm337.9 75.9c0-26.3-9.4-44.5-17.5-58.7-10.8-17.5-20.9-32.4-20.9-49.9 0-19.6 14.8-37.8 35.7-37.8.9 0 1.8.1 2.8.2-37.9-34.7-88.3-55.9-143.7-55.9-74.3 0-139.7 38.1-177.8 95.9 5 .2 9.7.3 13.7.3 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l77.5 230.4L249.8 247l-33.1-90.8c-11.5-.7-22.3-2-22.3-2-11.5-.7-10.1-18.2 1.3-17.5 0 0 35.1 2.7 56 2.7 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l76.9 228.7 21.2-70.9c9-29.4 16-50.5 16-68.7zm-139.9 29.3l-63.8 185.5c19.1 5.6 39.2 8.7 60.1 8.7 24.8 0 48.5-4.3 70.6-12.1-.6-.9-1.1-1.9-1.5-2.9l-65.4-179.2zm183-120.7c.9 6.8 1.4 14 1.4 21.9 0 21.6-4 45.8-16.2 76.2l-65 187.9C426.2 403 468.7 334.5 468.7 256c0-37-9.4-71.8-26-102.1zM504 256c0 136.8-111.3 248-248 248C119.2 504 8 392.7 8 256 8 119.2 119.2 8 256 8c136.7 0 248 111.2 248 248zm-11.4 0c0-130.5-106.2-236.6-236.6-236.6C125.5 19.4 19.4 125.5 19.4 256S125.6 492.6 256 492.6c130.5 0 236.6-106.1 236.6-236.6z"/></svg>WordPress</span><span><svg viewBox="0 0 640 512" aria-hidden="true" style="fill:#4353FF"><path d="M640 64L435.8 463.2H244l85.5-165.5h-3.8C255.1 389.3 149.9 449.5 0 463.2V300.1s95.9-5.7 152.3-64.9H0V64H171.1V204.8l3.8 0L244.9 64H374.3V203.9l3.8 0L450.7 64H640z"/></svg>Webflow</span><span><svg viewBox="0 0 448 512" aria-hidden="true" style="fill:#95BF47"><path d="M388.32,104.1a4.66,4.66,0,0,0-4.4-4c-2,0-37.23-.8-37.23-.8s-21.61-20.82-29.62-28.83V503.2L442.76,472S388.72,106.5,388.32,104.1ZM288.65,70.47a116.67,116.67,0,0,0-7.21-17.61C271,32.85,255.42,22,237,22a15,15,0,0,0-4,.4c-.4-.8-1.2-1.2-1.6-2C223.4,11.63,213,7.63,200.58,8c-24,.8-48,18-67.25,48.83-13.61,21.62-24,48.84-26.82,70.06-27.62,8.4-46.83,14.41-47.23,14.81-14,4.4-14.41,4.8-16,18-1.2,10-38,291.82-38,291.82L307.86,504V65.67a41.66,41.66,0,0,0-4.4.4S297.86,67.67,288.65,70.47ZM233.41,87.69c-16,4.8-33.63,10.4-50.84,15.61,4.8-18.82,14.41-37.63,25.62-50,4.4-4.4,10.41-9.61,17.21-12.81C232.21,54.86,233.81,74.48,233.41,87.69ZM200.58,24.44A27.49,27.49,0,0,1,215,28c-6.4,3.2-12.81,8.41-18.81,14.41-15.21,16.42-26.82,42-31.62,66.45-14.42,4.41-28.83,8.81-42,12.81C131.33,83.28,163.75,25.24,200.58,24.44ZM154.15,244.61c1.6,25.61,69.25,31.22,73.25,91.66,2.8,47.64-25.22,80.06-65.65,82.47-48.83,3.2-75.65-25.62-75.65-25.62l10.4-44s26.82,20.42,48.44,18.82c14-.8,19.22-12.41,18.81-20.42-2-33.62-57.24-31.62-60.84-86.86-3.2-46.44,27.22-93.27,94.47-97.68,26-1.6,39.23,4.81,39.23,4.81L221.4,225.39s-17.21-8-37.63-6.4C154.15,221,153.75,239.8,154.15,244.61ZM249.42,82.88c0-12-1.6-29.22-7.21-43.63,18.42,3.6,27.22,24,31.23,36.43Q262.63,78.68,249.42,82.88Z"/></svg>Shopify</span><span><svg viewBox="0 0 512 512" aria-hidden="true" style="fill:#92003B"><path d="M.361 256C.361 397 114 511 255 511C397 511 511 397 511 256C511 116 397 2.05 255 2.05C114 2.05 .361 116 .361 256zM192 150V363H149V150H192zM234 150H362V193H234V150zM362 235V278H234V235H362zM234 320H362V363H234V320z"/></svg>Elementor</span><span><svg viewBox="0 0 640 512" aria-hidden="true" style="fill:#4B8DFF"><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>Design to Development</span><span><svg viewBox="0 0 448 512" aria-hidden="true" style="fill:#4B8DFF"><path d="M448 80l0 48c0 44.2-100.3 80-224 80S0 172.2 0 128L0 80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6L448 288c0 44.2-100.3 80-224 80S0 332.2 0 288L0 186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6l0 85.9c0 44.2-100.3 80-224 80S0 476.2 0 432l0-85.9z"/></svg>CMS Strategy</span></div><div class="marquee-group" aria-hidden="true"><span><svg viewBox="0 0 512 512" aria-hidden="true" style="fill:#21759B"><path d="M61.7 169.4l101.5 278C92.2 413 43.3 340.2 43.3 256c0-30.9 6.6-60.1 18.4-86.6zm337.9 75.9c0-26.3-9.4-44.5-17.5-58.7-10.8-17.5-20.9-32.4-20.9-49.9 0-19.6 14.8-37.8 35.7-37.8.9 0 1.8.1 2.8.2-37.9-34.7-88.3-55.9-143.7-55.9-74.3 0-139.7 38.1-177.8 95.9 5 .2 9.7.3 13.7.3 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l77.5 230.4L249.8 247l-33.1-90.8c-11.5-.7-22.3-2-22.3-2-11.5-.7-10.1-18.2 1.3-17.5 0 0 35.1 2.7 56 2.7 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l76.9 228.7 21.2-70.9c9-29.4 16-50.5 16-68.7zm-139.9 29.3l-63.8 185.5c19.1 5.6 39.2 8.7 60.1 8.7 24.8 0 48.5-4.3 70.6-12.1-.6-.9-1.1-1.9-1.5-2.9l-65.4-179.2zm183-120.7c.9 6.8 1.4 14 1.4 21.9 0 21.6-4 45.8-16.2 76.2l-65 187.9C426.2 403 468.7 334.5 468.7 256c0-37-9.4-71.8-26-102.1zM504 256c0 136.8-111.3 248-248 248C119.2 504 8 392.7 8 256 8 119.2 119.2 8 256 8c136.7 0 248 111.2 248 248zm-11.4 0c0-130.5-106.2-236.6-236.6-236.6C125.5 19.4 19.4 125.5 19.4 256S125.6 492.6 256 492.6c130.5 0 236.6-106.1 236.6-236.6z"/></svg>WordPress</span><span><svg viewBox="0 0 640 512" aria-hidden="true" style="fill:#4353FF"><path d="M640 64L435.8 463.2H244l85.5-165.5h-3.8C255.1 389.3 149.9 449.5 0 463.2V300.1s95.9-5.7 152.3-64.9H0V64H171.1V204.8l3.8 0L244.9 64H374.3V203.9l3.8 0L450.7 64H640z"/></svg>Webflow</span><span><svg viewBox="0 0 448 512" aria-hidden="true" style="fill:#95BF47"><path d="M388.32,104.1a4.66,4.66,0,0,0-4.4-4c-2,0-37.23-.8-37.23-.8s-21.61-20.82-29.62-28.83V503.2L442.76,472S388.72,106.5,388.32,104.1ZM288.65,70.47a116.67,116.67,0,0,0-7.21-17.61C271,32.85,255.42,22,237,22a15,15,0,0,0-4,.4c-.4-.8-1.2-1.2-1.6-2C223.4,11.63,213,7.63,200.58,8c-24,.8-48,18-67.25,48.83-13.61,21.62-24,48.84-26.82,70.06-27.62,8.4-46.83,14.41-47.23,14.81-14,4.4-14.41,4.8-16,18-1.2,10-38,291.82-38,291.82L307.86,504V65.67a41.66,41.66,0,0,0-4.4.4S297.86,67.67,288.65,70.47ZM233.41,87.69c-16,4.8-33.63,10.4-50.84,15.61,4.8-18.82,14.41-37.63,25.62-50,4.4-4.4,10.41-9.61,17.21-12.81C232.21,54.86,233.81,74.48,233.41,87.69ZM200.58,24.44A27.49,27.49,0,0,1,215,28c-6.4,3.2-12.81,8.41-18.81,14.41-15.21,16.42-26.82,42-31.62,66.45-14.42,4.41-28.83,8.81-42,12.81C131.33,83.28,163.75,25.24,200.58,24.44ZM154.15,244.61c1.6,25.61,69.25,31.22,73.25,91.66,2.8,47.64-25.22,80.06-65.65,82.47-48.83,3.2-75.65-25.62-75.65-25.62l10.4-44s26.82,20.42,48.44,18.82c14-.8,19.22-12.41,18.81-20.42-2-33.62-57.24-31.62-60.84-86.86-3.2-46.44,27.22-93.27,94.47-97.68,26-1.6,39.23,4.81,39.23,4.81L221.4,225.39s-17.21-8-37.63-6.4C154.15,221,153.75,239.8,154.15,244.61ZM249.42,82.88c0-12-1.6-29.22-7.21-43.63,18.42,3.6,27.22,24,31.23,36.43Q262.63,78.68,249.42,82.88Z"/></svg>Shopify</span><span><svg viewBox="0 0 512 512" aria-hidden="true" style="fill:#92003B"><path d="M.361 256C.361 397 114 511 255 511C397 511 511 397 511 256C511 116 397 2.05 255 2.05C114 2.05 .361 116 .361 256zM192 150V363H149V150H192zM234 150H362V193H234V150zM362 235V278H234V235H362zM234 320H362V363H234V320z"/></svg>Elementor</span><span><svg viewBox="0 0 640 512" aria-hidden="true" style="fill:#4B8DFF"><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>Design to Development</span><span><svg viewBox="0 0 448 512" aria-hidden="true" style="fill:#4B8DFF"><path d="M448 80l0 48c0 44.2-100.3 80-224 80S0 172.2 0 128L0 80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6L448 288c0 44.2-100.3 80-224 80S0 332.2 0 288L0 186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6l0 85.9c0 44.2-100.3 80-224 80S0 476.2 0 432l0-85.9z"/></svg>CMS Strategy</span><span><svg viewBox="0 0 512 512" aria-hidden="true" style="fill:#21759B"><path d="M61.7 169.4l101.5 278C92.2 413 43.3 340.2 43.3 256c0-30.9 6.6-60.1 18.4-86.6zm337.9 75.9c0-26.3-9.4-44.5-17.5-58.7-10.8-17.5-20.9-32.4-20.9-49.9 0-19.6 14.8-37.8 35.7-37.8.9 0 1.8.1 2.8.2-37.9-34.7-88.3-55.9-143.7-55.9-74.3 0-139.7 38.1-177.8 95.9 5 .2 9.7.3 13.7.3 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l77.5 230.4L249.8 247l-33.1-90.8c-11.5-.7-22.3-2-22.3-2-11.5-.7-10.1-18.2 1.3-17.5 0 0 35.1 2.7 56 2.7 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l76.9 228.7 21.2-70.9c9-29.4 16-50.5 16-68.7zm-139.9 29.3l-63.8 185.5c19.1 5.6 39.2 8.7 60.1 8.7 24.8 0 48.5-4.3 70.6-12.1-.6-.9-1.1-1.9-1.5-2.9l-65.4-179.2zm183-120.7c.9 6.8 1.4 14 1.4 21.9 0 21.6-4 45.8-16.2 76.2l-65 187.9C426.2 403 468.7 334.5 468.7 256c0-37-9.4-71.8-26-102.1zM504 256c0 136.8-111.3 248-248 248C119.2 504 8 392.7 8 256 8 119.2 119.2 8 256 8c136.7 0 248 111.2 248 248zm-11.4 0c0-130.5-106.2-236.6-236.6-236.6C125.5 19.4 19.4 125.5 19.4 256S125.6 492.6 256 492.6c130.5 0 236.6-106.1 236.6-236.6z"/></svg>WordPress</span><span><svg viewBox="0 0 640 512" aria-hidden="true" style="fill:#4353FF"><path d="M640 64L435.8 463.2H244l85.5-165.5h-3.8C255.1 389.3 149.9 449.5 0 463.2V300.1s95.9-5.7 152.3-64.9H0V64H171.1V204.8l3.8 0L244.9 64H374.3V203.9l3.8 0L450.7 64H640z"/></svg>Webflow</span><span><svg viewBox="0 0 448 512" aria-hidden="true" style="fill:#95BF47"><path d="M388.32,104.1a4.66,4.66,0,0,0-4.4-4c-2,0-37.23-.8-37.23-.8s-21.61-20.82-29.62-28.83V503.2L442.76,472S388.72,106.5,388.32,104.1ZM288.65,70.47a116.67,116.67,0,0,0-7.21-17.61C271,32.85,255.42,22,237,22a15,15,0,0,0-4,.4c-.4-.8-1.2-1.2-1.6-2C223.4,11.63,213,7.63,200.58,8c-24,.8-48,18-67.25,48.83-13.61,21.62-24,48.84-26.82,70.06-27.62,8.4-46.83,14.41-47.23,14.81-14,4.4-14.41,4.8-16,18-1.2,10-38,291.82-38,291.82L307.86,504V65.67a41.66,41.66,0,0,0-4.4.4S297.86,67.67,288.65,70.47ZM233.41,87.69c-16,4.8-33.63,10.4-50.84,15.61,4.8-18.82,14.41-37.63,25.62-50,4.4-4.4,10.41-9.61,17.21-12.81C232.21,54.86,233.81,74.48,233.41,87.69ZM200.58,24.44A27.49,27.49,0,0,1,215,28c-6.4,3.2-12.81,8.41-18.81,14.41-15.21,16.42-26.82,42-31.62,66.45-14.42,4.41-28.83,8.81-42,12.81C131.33,83.28,163.75,25.24,200.58,24.44ZM154.15,244.61c1.6,25.61,69.25,31.22,73.25,91.66,2.8,47.64-25.22,80.06-65.65,82.47-48.83,3.2-75.65-25.62-75.65-25.62l10.4-44s26.82,20.42,48.44,18.82c14-.8,19.22-12.41,18.81-20.42-2-33.62-57.24-31.62-60.84-86.86-3.2-46.44,27.22-93.27,94.47-97.68,26-1.6,39.23,4.81,39.23,4.81L221.4,225.39s-17.21-8-37.63-6.4C154.15,221,153.75,239.8,154.15,244.61ZM249.42,82.88c0-12-1.6-29.22-7.21-43.63,18.42,3.6,27.22,24,31.23,36.43Q262.63,78.68,249.42,82.88Z"/></svg>Shopify</span><span><svg viewBox="0 0 512 512" aria-hidden="true" style="fill:#92003B"><path d="M.361 256C.361 397 114 511 255 511C397 511 511 397 511 256C511 116 397 2.05 255 2.05C114 2.05 .361 116 .361 256zM192 150V363H149V150H192zM234 150H362V193H234V150zM362 235V278H234V235H362zM234 320H362V363H234V320z"/></svg>Elementor</span><span><svg viewBox="0 0 640 512" aria-hidden="true" style="fill:#4B8DFF"><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>Design to Development</span><span><svg viewBox="0 0 448 512" aria-hidden="true" style="fill:#4B8DFF"><path d="M448 80l0 48c0 44.2-100.3 80-224 80S0 172.2 0 128L0 80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6L448 288c0 44.2-100.3 80-224 80S0 332.2 0 288L0 186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6l0 85.9c0 44.2-100.3 80-224 80S0 476.2 0 432l0-85.9z"/></svg>CMS Strategy</span></div></div></div><section class="stats wrap"><div class="stat reveal"><strong data-count="10">0+</strong><small>Years delivering websites</small></div><div class="stat reveal"><strong data-count="4">0</strong><small>Core website platforms</small></div><div class="stat reveal"><strong>1000+</strong><small>Build websites</small></div><div class="stat reveal"><strong>Remote</strong><small>Async collaboration</small></div></section><section class="section projects" id="work"><div class="wrap"><div class="section-head reveal"><div class="section-label">Selected Work</div><h2>Selected websites, built for real businesses.</h2><p class="section-intro">Explore selected client work by platform. Hover a project image to scroll through the full-page website preview, then open the live site.</p><div class="project-tabs" role="tablist" aria-label="Portfolio platforms"><button class="project-tab active" type="button" data-platform="wordpress" role="tab" aria-selected="true">WordPress <span class="count">28</span></button><button class="project-tab" type="button" data-platform="webflow" role="tab" aria-selected="false">Webflow <span class="count">13</span></button><button class="project-tab" type="button" data-platform="shopify" role="tab" aria-selected="false">Shopify <span class="count">5</span></button></div></div><div class="grid" id="projectGrid"></div></div></section><section class="section wrap about" id="about"><div class="section-head reveal"><div class="section-label">About</div><h2>Built for clean handoff.</h2></div><p class="reveal">I turn approved designs into polished, responsive websites across WordPress, Webflow, Shopify, and custom front-end workflows. My work focuses on clean implementation, flexible CMS structure, reliable communication, and careful QA so teams can launch confidently and manage content with less friction.</p></section><section class="section wrap" id="experience">
+  <div class="section-head reveal">
+    <div class="section-label">Work Experience</div>
+    <h2>Experience delivering production websites for real clients.</h2>
+  </div>
+  <div class="timeline experience-static">
+    <article class="role reveal">
+      <div class="role-left">
+        <span class="date">MAY 2021 — PRESENT</span>
+        <h3>Senior Web<br>Developer<br>Growmodo</h3>
+        <div class="role-location">Remote</div>
+      </div>
+      <ul>
+        <li>Build responsive marketing websites and landing pages in Webflow, WordPress, and Shopify.</li>
+        <li>Translate Figma and XD designs into accurate, production-ready front-end experiences.</li>
+        <li>Create scalable CMS structures using Webflow CMS, ACF, Crocoblock, and reusable components.</li>
+        <li>Develop Shopify Liquid sections, blocks, and theme settings for flexible storefront editing.</li>
+        <li>Coordinate with designers, project managers, and clients to keep delivery clear and on schedule.</li>
+      </ul>
+    </article>
+    <article class="role reveal">
+      <div class="role-left">
+        <span class="date">AUG 2019 — 2024</span>
+        <h3>Web Developer<br>enblesGROUP</h3>
+        <div class="role-location">Remote</div>
+      </div>
+      <ul>
+        <li>Delivered responsive websites across WordPress, Webflow, and Shopify based on client requirements.</li>
+        <li>Built custom Shopify Liquid components and CMS workflows for easier content management.</li>
+        <li>Supported hosting, performance checks, and troubleshooting to keep websites stable.</li>
+        <li>Guided clients through CMS usage so internal teams could update content confidently.</li>
+      </ul>
+    </article>
+    <article class="role reveal">
+      <div class="role-left">
+        <span class="date">DEC 2017 — AUG 2019</span>
+        <h3>Senior Web Designer<br>Personiv</h3>
+        <div class="role-location">Muntinlupa, Philippines</div>
+      </div>
+      <ul>
+        <li>Led responsive website production using WordPress Elementor and Duda CMS.</li>
+        <li>Managed developer output, reviewed quality, and helped maintain delivery standards.</li>
+        <li>Improved page speed, stability, and cross-device usability through optimization work.</li>
+      </ul>
+    </article>
+    <article class="role reveal">
+      <div class="role-left">
+        <span class="date">NOV 2015 — DEC 2017</span>
+        <h3>Web Designer<br>Personiv</h3>
+        <div class="role-location">Muntinlupa, Philippines</div>
+      </div>
+      <ul>
+        <li>Designed and built user-friendly website layouts using Duda CMS.</li>
+        <li>Checked layouts across screen sizes to improve usability and consistency.</li>
+        <li>Worked directly with clients to align design updates with business goals.</li>
+      </ul>
+    </article>
+  </div>
+</section><section class="section services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-label">Focus Areas</div>
+      <h2>How I help your project move faster</h2>
+    </div>
+    <div class="service-grid">
+      <article class="service reveal tilt"><span>01</span><h3>Design-to-Website<br>Development</h3><p>Turn approved Figma or XD designs into responsive websites that match the creative direction.</p></article>
+      <article class="service reveal tilt"><span>02</span><h3>Client-Friendly CMS<br>Setup</h3><p>Structure pages, fields, collections, and reusable blocks so content updates stay simple.</p></article>
+      <article class="service reveal tilt"><span>03</span><h3>Shopify Theme<br>Customization</h3><p>Create flexible Liquid sections, theme settings, and storefront components for growing stores.</p></article>
+      <article class="service reveal tilt"><span>04</span><h3>Performance, QA,<br>and Support</h3><p>Polish responsive details, fix bugs, improve speed, and support smoother launch handoffs.</p></article>
+    </div>
+  </div>
+</section><section class="section wrap" id="skills">
+  <div class="section-head reveal">
+    <div class="section-label">Technical Skills</div>
+    <h2>The stack I use to deliver dependable websites</h2>
+  </div>
+  <div class="tool-grid skills-eight">
+    <article class="tool reveal"><h3>Frontend</h3><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></article>
+    <article class="tool reveal"><h3>Platforms</h3><div class="tags"><span>WordPress</span><span>Webflow</span><span>Shopify</span><span>Duda</span></div></article>
+    <article class="tool reveal"><h3>CMS &amp; Tools</h3><div class="tags"><span>ACF</span><span>Crocoblock</span><span>Relume</span><span>Client-First</span></div></article>
+    <article class="tool reveal"><h3>Development</h3><div class="tags"><span>Git</span><span>GitHub</span><span>VS Code</span><span>Responsive QA</span></div></article>
+    <article class="tool reveal"><h3>Design</h3><div class="tags"><span>Figma</span><span>Adobe XD</span><span>Photoshop</span></div></article>
+    <article class="tool reveal"><h3>Marketing CRM</h3><div class="tags"><span>Klaviyo</span><span>HubSpot</span><span>Mailchimp</span></div></article>
+    <article class="tool reveal"><h3>Project Ops</h3><div class="tags"><span>Airtable</span><span>Slack</span><span>ClickUp</span><span>Teamwork</span><span>Monday</span></div></article>
+    <article class="tool reveal"><h3>AI Tools</h3><div class="tags"><span>ChatGPT</span><span>Claude</span><span>Codex</span></div></article>
+  </div>
+</section><section class="contact" id="contact"><div class="wrap contact-box reveal"><div class="section-label">Have a project?</div><h2>Let's build something that works.</h2><div class="contact-row"><p>Available for projects. Website builds, landing pages, CMS setup, Shopify theme work, QA, and ongoing support.</p><div class="actions"><a class="btn primary magnetic" href="mailto:ivineantipolo@gmail.com">Start a project ↗</a><a class="btn magnetic" href="tel:+639179214041">Call me</a></div></div><div class="contact-meta"><span>Cavite, Philippines · Remote</span><span>ivineantipolo@gmail.com</span><span>Response: 24–48h</span></div></div></section></main><script>
+
+const portfolioData={"wordpress": [["World Wise Travel", "https://worldwisetravel.com/"], ["Civil X Hire", "https://civil-x.com.au/"], ["Coastal Goddess", "https://coastalgoddess.com.au/"], ["Sitlec Electrical", "https://sitlec.com.au/"], ["Baissline Surveying", "https://baisslinesurveying.com.au/"], ["Blind Inspiration", "https://www.swaycurtains.com.au/"], ["Argie Grillz", "https://argiegrillz.com.au/"], ["Wow Clinic", "https://wowclinic.com.au/"], ["Greyfield", "https://greyfield.com.au/"], ["Ausdeck", "https://ausdeck.com.au/"], ["North Penrith Marketplace", "https://northpenrithmarketplace.com.au/"], ["Gift Card Store", "https://giftcardstore.com.au/"], ["Southside Mower Centre", "https://southsidemowercentre.com.au/"], ["Rush Hour", "https://rushhour.net.au/"], ["PlaySpaces Australia", "https://playspacesaustralia.com.au/"], ["Ability Companions", "https://abilitycompanions.com/"], ["Teresa's Centre", "https://teresascentre.com.au/"], ["The Radiology Centre", "https://theradiologycentre.com.au/"], ["Sherwood Receptions", "https://www.sherwoodreceptions.com.au/"], ["GNM Electrical", "https://gnmelectrical.com.au/"], ["Modena", "https://modena.com.au/"], ["Global JS", "https://globaljcllc.com/"], ["Songbird Floral Designs", "https://songbirdfloraldesigns.com/"], ["Cultivating Connection Counseling", "https://cultivatingconnectioncounseling.com/"], ["Midwest Concrete Pump Sales", "https://midwestcps.com/"], ["Chimney Sweep Clean", "https://chimneysweepclean.com/"], ["Viridios Capital", "https://viridioscapital.com/"], ["Maralytics", "https://maralytics.com/"]], "webflow": [["Weddings at the Overlook", "https://www.weddingsattheoverlook.com/"], ["Dawnelle Davis", "https://www.dawnelledavis.com/"], ["Superblue", "https://www.superblue.com/"], ["French Alley", "https://www.frenchalley.ae/"], ["Satolah Creek Farm", "https://satolahcreekfarm.com/"], ["Swifly", "https://www.swifly.co/"], ["Mero", "https://www.mero.co/"], ["Zest MSP", "https://zestmsp.com/"], ["Yarborough Mill", "https://www.yarboroughmill.com/"], ["Crew General Constructors Inc", "https://www.crewgc.com/"], ["Takallam", "https://takallam.com/"], ["Alligator Steps", "https://www.alligatorsteps.com/"], ["Serebro Health", "https://serebrohealth.ca/"]], "shopify": [["Turkey Flat", "https://turkeyflat.com.au/"], ["Caviar Culture", "https://caviarculture.com.au/"], ["Karrawatta", "https://www.karrawatta.com.au/"], ["Mindrise", "https://mindrise.au/"], ["By Beth", "https://bybeth.com/"]]};
+const platformLabels={wordpress:'WordPress',webflow:'Webflow',shopify:'Shopify'};
+const grid=document.querySelector('#projectGrid');
+const cursor=document.querySelector('.cursor');
+let revealObserver;
+
+function screenshotUrl(url){
+  return `https://s.wordpress.com/mshots/v1/${encodeURIComponent(url)}?w=1400`;
+}
+
+function cardClass(i){
+  const pattern=['featured','','tall','','featured','','tall',''];
+  return pattern[i%pattern.length];
+}
+
+function wireProjectInteractions(){
+  document.querySelectorAll('#projectGrid .preview').forEach(pre=>{
+    const img=pre.querySelector('img');
+    const reset=()=>{
+      img.style.transitionDuration='1.2s,.35s';
+      img.style.transform='translateY(0)';
+    };
+    const go=()=>{
+      const distance=Math.max(0,img.getBoundingClientRect().height-pre.clientHeight);
+      img.style.transitionDuration=`${Math.max(3,Math.min(9,distance/130))}s,.35s`;
+      img.style.transform=`translateY(-${distance}px)`;
+    };
+    pre.addEventListener('mouseenter',go);
+    pre.addEventListener('mouseleave',reset);
+    pre.addEventListener('mouseenter',()=>cursor.classList.add('on'));
+    pre.addEventListener('mousemove',e=>{
+      cursor.style.left=e.clientX+'px';
+      cursor.style.top=e.clientY+'px';
+    });
+    pre.addEventListener('mouseleave',()=>cursor.classList.remove('on'));
+  });
+}
+
+function renderProjects(platform){
+  const items=portfolioData[platform] || [];
+  grid.classList.remove('project-grid-enter');
+  grid.innerHTML=items.map((p,i)=>{
+    const [name,url]=p;
+    const domain=new URL(url).hostname.replace('www.','');
+    const platformName=platformLabels[platform];
+    return `<article class="card ${cardClass(i)}"><a class="preview" href="${url}" target="_blank" rel="noreferrer"><img loading="lazy" alt="${name} website screenshot" src="${screenshotUrl(url)}"><span class="view">View live ↗</span></a><div class="info"><span class="idx">${String(i+1).padStart(2,'0')}</span><div><h3>${name}</h3><p>${domain}</p><div class="tags"><span>${platformName}</span><span>Website Development</span><span>Responsive Build</span></div></div></div></article>`;
+  }).join('');
+  requestAnimationFrame(()=>grid.classList.add('project-grid-enter'));
+  [...grid.querySelectorAll('.card')].forEach((card,i)=>card.style.animationDelay=`${Math.min(i*35,280)}ms`);
+  wireProjectInteractions();
+}
+
+document.querySelectorAll('.project-tab').forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    document.querySelectorAll('.project-tab').forEach(t=>{
+      t.classList.remove('active');
+      t.setAttribute('aria-selected','false');
+    });
+    tab.classList.add('active');
+    tab.setAttribute('aria-selected','true');
+    renderProjects(tab.dataset.platform);
+  });
+});
+
+renderProjects('wordpress');
+
+document.querySelectorAll('.reveal').forEach((e,i)=>e.style.transitionDelay=`${Math.min(i*35,220)}ms`);
+revealObserver=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){
+    e.target.classList.add('show');
+    revealObserver.unobserve(e.target);
+  }
+}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(e=>revealObserver.observe(e));
+
+document.addEventListener('scroll',()=>document.querySelector('.header').classList.toggle('scrolled',scrollY>20));
+
+document.querySelectorAll('[data-count]').forEach(el=>{
+  let done=false;
+  new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting&&!done){
+      done=true;
+      let t=+el.dataset.count,s=performance.now();
+      let tick=n=>{
+        let p=Math.min((n-s)/900,1);
+        el.textContent=Math.floor(p*t)+(t===10?'+':'');
+        if(p<1)requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }
+  })).observe(el);
+});
+
+document.querySelectorAll('.role:not(.experience-static .role)').forEach(r=>r.addEventListener('click',()=>{
+  let open=!r.classList.contains('open');
+  document.querySelectorAll('.role').forEach(x=>{
+    x.classList.remove('open');
+    x.querySelector('.toggle').textContent='+';
+  });
+  if(open){
+    r.classList.add('open');
+    r.querySelector('.toggle').textContent='−';
+  }
+}));
+
+document.querySelectorAll('.tilt').forEach(c=>{
+  c.addEventListener('pointermove',e=>{
+    let b=c.getBoundingClientRect(),x=(e.clientX-b.left)/b.width-.5,y=(e.clientY-b.top)/b.height-.5;
+    c.style.transform=`perspective(900px) rotateX(${-y*5}deg) rotateY(${x*5}deg) translateY(-4px)`;
+  });
+  c.addEventListener('pointerleave',()=>c.style.transform='');
+});
+
+document.querySelectorAll('.magnetic').forEach(b=>{
+  b.addEventListener('pointermove',e=>{
+    let r=b.getBoundingClientRect();
+    b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.1}px,${(e.clientY-r.top-r.height/2)*.14}px)`;
+  });
+  b.addEventListener('pointerleave',()=>b.style.transform='');
+});
+
+</script></body></html>
