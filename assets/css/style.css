@@ -870,6 +870,10 @@ p{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace !impo
   .experience-static .role-location { grid-column:1; grid-row:3; }
   .experience-static .toggle { grid-column:2; grid-row:1 / 4; }
   .experience-static .role ul { margin-left:0; }
+  .experience-static .role.open ul {
+    max-height:1000px;
+    padding-bottom:36px;
+  }
 }
 
 /* Responsive tablet and mobile layout */
