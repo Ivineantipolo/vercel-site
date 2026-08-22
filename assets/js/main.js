@@ -6,6 +6,9 @@ const cursor=document.querySelector('.cursor');
 const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const finePointer=window.matchMedia('(pointer: fine)').matches;
 let revealObserver;
+let screenshotPreloadObserver;
+let screenshotPreloadTimer;
+const screenshotLoaders=new WeakMap();
 
 function screenshotUrl(url){
   return `https://s.wordpress.com/mshots/v1/${encodeURIComponent(url)}?w=1400`;
@@ -30,10 +33,26 @@ function cardClass(i){
 }
 
 function wireProjectInteractions(){
-  document.querySelectorAll('#projectGrid .preview').forEach(pre=>{
+  if(screenshotPreloadObserver)screenshotPreloadObserver.disconnect();
+  if(screenshotPreloadTimer)clearTimeout(screenshotPreloadTimer);
+
+  if(finePointer&&!reducedMotion&&'IntersectionObserver' in window){
+    screenshotPreloadObserver=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(!entry.isIntersecting)return;
+        screenshotLoaders.get(entry.target)?.();
+        screenshotPreloadObserver.unobserve(entry.target);
+      });
+    },{rootMargin:'0px',threshold:.01});
+  }
+
+  const previews=[...document.querySelectorAll('#projectGrid .preview')];
+
+  previews.forEach(pre=>{
     const img=pre.querySelector('img');
     const card=pre.closest('.card');
     let hovering=false;
+    let fullImagePromise;
 
     const reset=()=>{
       hovering=false;
@@ -41,57 +60,68 @@ function wireProjectInteractions(){
       img.style.transform='translateY(0)';
     };
 
-    const go=()=>{
-      hovering=true;
+    const startScroll=()=>{
+      if(!hovering||!img.naturalWidth)return;
 
-      const startScroll=()=>{
-        if(!hovering||!img.naturalWidth)return;
+      const renderedHeight=(img.naturalHeight/img.naturalWidth)*pre.clientWidth;
+      const distance=Math.max(0,renderedHeight-pre.clientHeight);
+      const duration=Math.max(4,Math.min(14,distance/110));
 
-        const renderedHeight=(img.naturalHeight/img.naturalWidth)*pre.clientWidth;
-        const distance=Math.max(0,renderedHeight-pre.clientHeight);
-        const duration=Math.max(4,Math.min(14,distance/110));
+      img.style.transitionDuration='.4s,0s,.35s';
+      img.style.transform='translateY(0)';
+      void img.offsetHeight;
 
-        img.style.transitionDuration='.4s,0s,.35s';
-        img.style.transform='translateY(0)';
-        void img.offsetHeight;
+      requestAnimationFrame(()=>{
+        if(!hovering)return;
+        img.style.transitionDuration=`.4s,${duration}s,.35s`;
+        img.style.transform=`translateY(-${distance}px)`;
+      });
+    };
 
-        requestAnimationFrame(()=>{
-          if(!hovering)return;
-          img.style.transitionDuration=`.4s,${duration}s,.35s`;
-          img.style.transform=`translateY(-${distance}px)`;
-        });
-      };
+    const loadFullScreenshot=()=>{
+      if(img.dataset.fullLoaded==='true')return Promise.resolve(true);
+      if(fullImagePromise)return fullImagePromise;
 
-      const loadFullScreenshot=()=>{
-        if(img.dataset.fullLoaded==='true'){
-          startScroll();
-          return;
-        }
-        if(img.dataset.fullLoading==='true')return;
-
-        img.dataset.fullLoading='true';
+      img.dataset.fullLoading='true';
+      fullImagePromise=new Promise(resolve=>{
         const fullImage=new Image();
 
         fullImage.addEventListener('load',()=>{
-          img.dataset.fullLoading='false';
-          img.dataset.fullLoaded='true';
           img.src=fullImage.src;
 
+          const finish=()=>{
+            img.dataset.fullLoading='false';
+            img.dataset.fullLoaded='true';
+            resolve(true);
+          };
+
           if(typeof img.decode==='function'){
-            img.decode().catch(()=>{}).finally(startScroll);
+            img.decode().catch(()=>{}).finally(finish);
           }else{
-            requestAnimationFrame(startScroll);
+            requestAnimationFrame(finish);
           }
         },{once:true});
 
         fullImage.addEventListener('error',()=>{
           img.dataset.fullLoading='false';
+          fullImagePromise=undefined;
+          resolve(false);
         },{once:true});
 
         fullImage.src=img.dataset.fullSrc;
-      };
+      });
 
-      loadFullScreenshot();
+      return fullImagePromise;
+    };
+
+    screenshotLoaders.set(pre,loadFullScreenshot);
+    if(screenshotPreloadObserver)screenshotPreloadObserver.observe(pre);
+
+    const go=()=>{
+      hovering=true;
+      loadFullScreenshot().then(loaded=>{
+        if(loaded)startScroll();
+      });
     };
     pre.addEventListener('mouseenter',go);
     pre.addEventListener('mouseleave',reset);
@@ -109,6 +139,12 @@ function wireProjectInteractions(){
       });
     }
   });
+
+  if(finePointer&&!reducedMotion){
+    screenshotPreloadTimer=setTimeout(()=>{
+      previews.slice(0,3).forEach(pre=>screenshotLoaders.get(pre)?.());
+    },200);
+  }
 }
 
 function wireImageShimmer(){
