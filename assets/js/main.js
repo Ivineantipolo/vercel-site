@@ -20,14 +20,37 @@ function wireProjectInteractions(){
   document.querySelectorAll('#projectGrid .preview').forEach(pre=>{
     const img=pre.querySelector('img');
     const card=pre.closest('.card');
+    let hovering=false;
+
     const reset=()=>{
-      img.style.transitionDuration='1.2s,.35s';
+      hovering=false;
+      img.style.transitionDuration='.4s,1.1s,.35s';
       img.style.transform='translateY(0)';
     };
+
     const go=()=>{
-      const distance=Math.max(0,img.getBoundingClientRect().height-pre.clientHeight);
-      img.style.transitionDuration=`${Math.max(3,Math.min(9,distance/130))}s,.35s`;
-      img.style.transform=`translateY(-${distance}px)`;
+      hovering=true;
+
+      const startScroll=()=>{
+        if(!hovering||!img.naturalWidth)return;
+
+        const renderedHeight=(img.naturalHeight/img.naturalWidth)*pre.clientWidth;
+        const distance=Math.max(0,renderedHeight-pre.clientHeight);
+        const duration=Math.max(4,Math.min(14,distance/110));
+
+        img.style.transitionDuration='.4s,0s,.35s';
+        img.style.transform='translateY(0)';
+        void img.offsetHeight;
+
+        requestAnimationFrame(()=>{
+          if(!hovering)return;
+          img.style.transitionDuration=`.4s,${duration}s,.35s`;
+          img.style.transform=`translateY(-${distance}px)`;
+        });
+      };
+
+      if(img.complete)startScroll();
+      else img.addEventListener('load',startScroll,{once:true});
     };
     pre.addEventListener('mouseenter',go);
     pre.addEventListener('mouseleave',reset);
