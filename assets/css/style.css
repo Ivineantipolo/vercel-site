@@ -848,6 +848,10 @@ svg { max-width:100%; }
 .contact-row > *,
 .info > div { min-width:0; }
 
+@media(min-width:951px){
+  .hero h1 { font-size:80px; }
+}
+
 @media(max-width:950px){
   .wrap { width:min(var(--max),calc(100% - 32px)); }
 

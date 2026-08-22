@@ -69,29 +69,26 @@ function wireProjectInteractions(){
         }
         if(img.dataset.fullLoading==='true')return;
 
-        const fallbackSrc=img.src;
         img.dataset.fullLoading='true';
-        pre.classList.add('loading');
+        const fullImage=new Image();
 
-        const handleLoad=()=>{
-          img.removeEventListener('error',handleError);
+        fullImage.addEventListener('load',()=>{
           img.dataset.fullLoading='false';
           img.dataset.fullLoaded='true';
-          pre.classList.remove('loading');
-          startScroll();
-        };
+          img.src=fullImage.src;
 
-        const handleError=()=>{
-          img.removeEventListener('load',handleLoad);
+          if(typeof img.decode==='function'){
+            img.decode().catch(()=>{}).finally(startScroll);
+          }else{
+            requestAnimationFrame(startScroll);
+          }
+        },{once:true});
+
+        fullImage.addEventListener('error',()=>{
           img.dataset.fullLoading='false';
-          pre.classList.remove('loading');
-          img.src=fallbackSrc;
-        };
+        },{once:true});
 
-        img.addEventListener('load',handleLoad,{once:true});
-        img.addEventListener('error',handleError,{once:true});
-
-        img.src=img.dataset.fullSrc;
+        fullImage.src=img.dataset.fullSrc;
       };
 
       loadFullScreenshot();
