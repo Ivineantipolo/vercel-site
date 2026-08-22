@@ -891,11 +891,18 @@ svg { max-width:100%; }
   }
 
   .hero {
-    grid-template-columns:minmax(0,1fr);
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
     gap:48px;
     min-height:auto;
     padding-top:118px;
     padding-bottom:86px;
+  }
+  .hero > div,
+  .hero > aside {
+    width:100%;
+    max-width:none;
   }
   .hero::before {
     width:460px;
