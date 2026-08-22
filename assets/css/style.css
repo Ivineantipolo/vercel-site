@@ -852,7 +852,8 @@ svg { max-width:100%; }
   .wrap { width:min(var(--max),calc(100% - 32px)); }
 
   .header {
-    width:calc(100% - 24px);
+    width:calc(100vw - 24px);
+    max-width:calc(100vw - 24px);
     padding:8px 10px;
   }
 
@@ -898,6 +899,7 @@ svg { max-width:100%; }
     min-height:auto;
     padding-top:118px;
     padding-bottom:86px;
+    overflow-x:clip;
   }
   .hero > div,
   .hero > aside {
@@ -934,7 +936,10 @@ svg { max-width:100%; }
 
 @media(max-width:680px){
   .wrap { width:min(var(--max),calc(100% - 24px)); }
-  .header { width:calc(100% - 16px); }
+  .header {
+    width:calc(100vw - 16px);
+    max-width:calc(100vw - 16px);
+  }
 
   .hero {
     gap:38px;
