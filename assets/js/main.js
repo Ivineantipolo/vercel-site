@@ -46,6 +46,19 @@ function wireProjectInteractions(){
   });
 }
 
+function wireImageShimmer(){
+  grid.querySelectorAll('.preview').forEach(pre=>{
+    pre.classList.add('loading');
+    const img=pre.querySelector('img');
+    const clear=()=>pre.classList.remove('loading');
+    if(img.complete)clear();
+    else{
+      img.addEventListener('load',clear,{once:true});
+      img.addEventListener('error',clear,{once:true});
+    }
+  });
+}
+
 function renderProjects(platform){
   const items=portfolioData[platform] || [];
   grid.classList.remove('project-grid-enter');
@@ -58,6 +71,7 @@ function renderProjects(platform){
   requestAnimationFrame(()=>grid.classList.add('project-grid-enter'));
   [...grid.querySelectorAll('.card')].forEach((card,i)=>card.style.animationDelay=`${Math.min(i*35,280)}ms`);
   wireProjectInteractions();
+  wireImageShimmer();
 }
 
 document.querySelectorAll('.project-tab').forEach(tab=>{
@@ -179,3 +193,59 @@ if(observedSections.length){
   },{rootMargin:'-25% 0px -60%',threshold:[0,.1,.3,.6]});
   observedSections.forEach(section=>navObserver.observe(section));
 }
+
+// Mobile nav toggle
+const header=document.querySelector('.header');
+const navToggle=document.querySelector('.nav-toggle');
+if(header&&navToggle){
+  navToggle.addEventListener('click',()=>{
+    const open=header.classList.toggle('nav-open');
+    navToggle.setAttribute('aria-expanded',String(open));
+  });
+  document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>{
+    header.classList.remove('nav-open');
+    navToggle.setAttribute('aria-expanded','false');
+  }));
+}
+
+// Hero headline word-by-word reveal
+(function initHeroReveal(){
+  const h1=document.querySelector('.hero h1');
+  if(!h1||reducedMotion)return;
+  const gradientSpan=h1.querySelector('span');
+  const textNode=[...h1.childNodes].find(n=>n.nodeType===3&&n.textContent.trim());
+  let wordCount=0;
+  if(textNode){
+    const words=textNode.textContent.trim().split(/\s+/);
+    wordCount=words.length;
+    const frag=document.createDocumentFragment();
+    words.forEach((w,i)=>{
+      const mask=document.createElement('span');
+      mask.className='word-mask';
+      const word=document.createElement('span');
+      word.className='word';
+      word.style.animationDelay=`${i*70}ms`;
+      word.textContent=w;
+      mask.appendChild(word);
+      frag.appendChild(mask);
+      frag.appendChild(document.createTextNode(' '));
+    });
+    h1.replaceChild(frag,textNode);
+  }
+  if(gradientSpan){
+    gradientSpan.classList.add('word-line');
+    gradientSpan.style.animationDelay=`${wordCount*70+150}ms`;
+  }
+})();
+
+// Back to top
+const toTop=document.createElement('button');
+toTop.className='to-top';
+toTop.type='button';
+toTop.setAttribute('aria-label','Back to top');
+toTop.textContent='↑';
+document.body.appendChild(toTop);
+toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:reducedMotion?'auto':'smooth'}));
+function updateToTop(){toTop.classList.toggle('show',window.scrollY>600);}
+updateToTop();
+document.addEventListener('scroll',updateToTop,{passive:true});
