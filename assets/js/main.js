@@ -127,6 +127,25 @@ document.querySelectorAll('.role:not(.experience-static .role)').forEach(r=>r.ad
   }
 }));
 
+document.querySelectorAll('.experience-static .role').forEach(role=>{
+  const toggleRole=()=>{
+    const willOpen=!role.classList.contains('open');
+    document.querySelectorAll('.experience-static .role').forEach(r=>{
+      r.classList.remove('open');
+      const b=r.querySelector('.toggle');
+      if(b){b.textContent='+';b.setAttribute('aria-expanded','false');}
+    });
+    if(willOpen){
+      role.classList.add('open');
+      const btn=role.querySelector('.toggle');
+      if(btn){btn.textContent='−';btn.setAttribute('aria-expanded','true');}
+    }
+  };
+  role.addEventListener('click',toggleRole);
+  const toggleBtn=role.querySelector('.toggle');
+  if(toggleBtn)toggleBtn.addEventListener('click',e=>{e.stopPropagation();toggleRole();});
+});
+
 document.querySelectorAll('.tilt').forEach(c=>{
   c.addEventListener('pointermove',e=>{
     let b=c.getBoundingClientRect(),x=(e.clientX-b.left)/b.width-.5,y=(e.clientY-b.top)/b.height-.5;
