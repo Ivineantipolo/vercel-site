@@ -931,6 +931,9 @@ svg { max-width:100%; }
   .skills-eight { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
   .about,
   .contact-row { grid-template-columns:minmax(0,1fr); }
+  .about { gap:28px; }
+  .about .section-head,
+  .about > p { margin-block:0; }
 
   .card:hover,
   .service:hover,
@@ -982,6 +985,8 @@ svg { max-width:100%; }
   .section { padding-block:68px; }
   .section-head { margin-bottom:34px; }
   .section h2 { font-size:clamp(36px,10vw,48px); }
+  .about { gap:20px; }
+  .about .section-head { margin-bottom:0; }
 
   #projectGrid { grid-template-columns:minmax(0,1fr); }
   .project-tabs {

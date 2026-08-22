@@ -119,6 +119,14 @@ function wireProjectInteractions(){
 
     const go=()=>{
       hovering=true;
+      if(img.complete&&img.naturalWidth){
+        startScroll();
+      }else{
+        img.addEventListener('load',startScroll,{once:true});
+      }
+
+      if(img.dataset.fullLoaded==='true')return;
+
       loadFullScreenshot().then(loaded=>{
         if(loaded)startScroll();
       });
