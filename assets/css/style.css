@@ -543,7 +543,12 @@ body::after {
 .view { z-index: 1; border-color: rgba(255,255,255,.2); background: rgba(5,8,14,.72); backdrop-filter: blur(15px); }
 .info { padding: 24px; }
 .info h3 { letter-spacing: -.035em; }
-.idx { color: var(--cyan); }
+.idx {
+  align-self:flex-start;
+  margin-top:7px;
+  color:var(--cyan);
+  line-height:1;
+}
 
 .about { align-items: center; }
 .about p { font-size: 18px !important; color: #a7b3c4; }
