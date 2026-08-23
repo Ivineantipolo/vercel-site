@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="IA">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#163b59" />
+      <stop offset="0.55" stop-color="#0d1725" />
+      <stop offset="1" stop-color="#211f40" />
+    </linearGradient>
+    <linearGradient id="accent" x1="15" y1="16" x2="50" y2="49" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#65e7ff" />
+      <stop offset="1" stop-color="#6e8cff" />
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="url(#bg)" />
+  <rect x="2.75" y="2.75" width="58.5" height="58.5" rx="14.25" fill="none" stroke="url(#accent)" stroke-width="1.5" />
+  <text x="32" y="41" fill="white" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="800" letter-spacing="-2" text-anchor="middle">IA</text>
+  <path d="M17 48h30" stroke="url(#accent)" stroke-width="3" stroke-linecap="round" />
+</svg>
