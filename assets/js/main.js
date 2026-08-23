@@ -87,6 +87,20 @@ function wireProjectInteractions(){
         const fullImage=new Image();
 
         fullImage.addEventListener('load',()=>{
+          const placeholderWidth=img.naturalWidth || 1400;
+          const maxExpectedWidth=Math.max(3200,placeholderWidth*2.5);
+
+          // Some sites make the full-page capture service expand the canvas
+          // far beyond the requested viewport, leaving a tiny page at the
+          // left and a large blank area. Keep the healthy mShots preview when
+          // that happens instead of swapping in the malformed capture.
+          if(fullImage.naturalWidth>maxExpectedWidth){
+            img.dataset.fullLoading='false';
+            img.dataset.fullRejected='true';
+            resolve(false);
+            return;
+          }
+
           img.src=fullImage.src;
 
           const finish=()=>{
