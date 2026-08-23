@@ -865,7 +865,7 @@ p{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace !impo
     min-height:0;
     padding:22px 0;
   }
-  .experience-static .date { grid-column:1; grid-row:1; }
+  .experience-static .date { grid-column:1; grid-row:1; margin-left:10px; }
   .experience-static .role h3 { grid-column:1; grid-row:2; margin-top:8px; }
   .experience-static .role-location { grid-column:1; grid-row:3; }
   .experience-static .toggle { grid-column:2; grid-row:1 / 4; }
