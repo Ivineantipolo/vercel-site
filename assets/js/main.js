@@ -5,6 +5,10 @@ const grid=document.querySelector('#projectGrid');
 const cursor=document.querySelector('.cursor');
 const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const finePointer=window.matchMedia('(pointer: fine)').matches;
+const viewportScreenshotHosts=new Set([
+  'northernagcapital.com',
+  'sherwoodreceptions.com.au'
+]);
 let revealObserver;
 let screenshotPreloadObserver;
 let screenshotPreloadTimer;
@@ -15,15 +19,18 @@ function screenshotUrl(url){
 }
 
 function fullScreenshotUrl(url){
+  const host=new URL(url).hostname.replace(/^www\./,'');
+  const useFullPage=!viewportScreenshotHosts.has(host);
   const params=new URLSearchParams({
     url,
     meta:'false',
     embed:'screenshot.url',
-    'screenshot.fullPage':'true',
+    'screenshot.fullPage':String(useFullPage),
     'screenshot.type':'jpeg',
     'viewport.width':'1400',
     'viewport.height':'900'
   });
+  if(!useFullPage)params.set('viewport.deviceScaleFactor','1');
   return `https://api.microlink.io/?${params}`;
 }
 
